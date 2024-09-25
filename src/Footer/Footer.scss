@@ -1,0 +1,104 @@
+@import "../Common/Mixin.scss";
+footer {
+  width: 100%;
+  background-color: black;
+  .footer-part {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 300px;
+    background-color: black;
+    color: white;
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 19px;
+    // border: 1px solid red;
+
+    @include d900 {
+      padding: 60px 30px;
+    }
+
+    .f-content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 25px;
+      // border: 2px solid red;
+
+      .fheading {
+        font-size: 18px;
+        margin-top: 7px;
+      }
+
+      .f-line {
+        width: 60%;
+        border-bottom: 1px solid gray;
+      }
+
+      .f-item {
+        display: flex;
+
+        a {
+          text-decoration: none;
+        }
+
+        .btn {
+          border-radius: 20px;
+          outline: none;
+          padding: 8px 15px;
+          background-color: #ff0000;
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          align-items: center;
+          cursor: pointer;
+
+          div {
+            padding: 2px 8px;
+            background-color: white;
+            color: #ff0000;
+            border-radius: 50%;
+          }
+
+          span {
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+
+        .logo {
+          color: #ff0000;
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 15px;
+          color: gray;
+          cursor: pointer;
+        }
+
+        .newsletter {
+          display: flex;
+          gap: 10px;
+
+          input {
+            padding: 10px;
+            outline: #ff0000;
+          }
+
+          .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding: 8px;
+            border: 1px solid #ff0000;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
