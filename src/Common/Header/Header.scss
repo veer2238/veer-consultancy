@@ -2,7 +2,14 @@
 header {
   width: 100%;
   border-bottom: 0.3px solid rgba(0, 0, 0, 0.073);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
 
+  @include max650 {
+    position: relative;
+  }
   .header {
     max-width: 1200px;
     margin: 0 auto;

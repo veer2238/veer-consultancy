@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const PassportVerify = () => {
 
-    const { msg, setMsg, setLoading, sneck, setSneck } = useContext(MyContext)
+    const {setMsg, setLoading, setSneck } = useContext(MyContext)
 
     // Initial form values
     const initialValues = {
@@ -56,7 +56,7 @@ const PassportVerify = () => {
             <div className='passport'>
                 <div className='pass'>
 
-                    <div className="anim">
+                    <div className="panim">
                         <svg className="pentagon-border outer-pentagon" viewBox="0 0 100 100">
                             <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
                         </svg>
@@ -92,7 +92,7 @@ const PassportVerify = () => {
                                         <option value="" label="Select Employeement type" />
                                         <option value="Government" label="Government" />
                                         <option value="Private" label="Private" />
-                                        <option value="Homemaker" label="Private" />
+                                        <option value="Homemaker" label="Homemaker" />
                                         <option value="Not Employed" label="Not Employed" />
                                         <option value="Others" label="Others" />
                                         <option value="Retired Goverment Servant" label="Retired Goverment Servant" />

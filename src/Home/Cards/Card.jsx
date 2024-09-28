@@ -7,7 +7,6 @@ import MyContext from '../../Common/Context/MyContext';
 const Card = ({ obj }) => {
     const { Navigate } = useContext(MyContext)
 
-
     return (
 
         <>

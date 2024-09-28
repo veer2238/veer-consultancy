@@ -1,205 +1,175 @@
 @import "../Common/Mixin.scss";
-.contact {
-  width: 100%;
-  min-width: 552px;
-  .contact-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
 
-    @include min650 {
-      padding: 50px 30px;
-    }
+.contact-mainn {
+  max-width: 1200px;
+  margin: 40px auto;
 
-    @include max1024 {
-      padding: 16px;
-    }
+  h3 {
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    font-size: 24px;
+  }
 
-    h3 {
-      text-align: center;
-      line-height: 0;
-      margin-bottom: 60px;
-      letter-spacing: 2px;
-      font-size: 24px;
-    }
+  @include m1270 {
+    margin: 40px 10px;
+  }
 
-    .con {
+  .con {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .anim {
+      position: relative;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
 
-      .anim {
-        position: relative;
+      @include m1000 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+      }
+
+      .pentagon-border {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0);
+        animation-timing-function: ease-in-out;
+      }
+
+      /* Pentagon sizes */
+      .outer-pentagon {
+        width: 250px;
+        height: 250px;
+        animation: pentagonAnim 6s infinite;
+        animation-delay: 0s;
+      }
+
+      .inner-pentagon {
+        width: 200px;
+        height: 200px;
+        animation: pentagonAnim 6s infinite;
+        animation-delay: 1s;
+      }
+
+      .inner1-pentagon {
+        width: 150px;
+        height: 150px;
+        animation: pentagonAnim 6s infinite;
+        animation-delay: 2s;
+      }
+
+      .inner2-pentagon {
+        width: 100px;
+        height: 100px;
+        animation: pentagonAnim 6s infinite;
+        animation-delay: 3s;
+      }
+
+      .inner3-pentagon {
+        width: 50px;
+        height: 50px;
+        animation: pentagonAnim 6s infinite;
+        animation-delay: 4s;
+      }
+    }
+
+    .form-container {
+      z-index: 9;
+
+      .contact-form {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        @include m1000 {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          opacity: 0.5;
-        }
-
-        .pentagon-border {
-          position: absolute;
-          opacity: 0;
-          transform: scale(0);
-          animation-timing-function: ease-in-out;
-        }
-
-        /* Pentagon sizes */
-        .outer-pentagon {
-          width: 250px;
-          height: 250px;
-          animation: pentagonAnim 6s infinite;
-          animation-delay: 0s;
-        }
-
-        .inner-pentagon {
-          width: 200px;
-          height: 200px;
-          animation: pentagonAnim 6s infinite;
-          animation-delay: 1s;
-        }
-
-        .inner1-pentagon {
-          width: 150px;
-          height: 150px;
-          animation: pentagonAnim 6s infinite;
-          animation-delay: 2s;
-        }
-
-        .inner2-pentagon {
-          width: 100px;
-          height: 100px;
-          animation: pentagonAnim 6s infinite;
-          animation-delay: 3s;
-        }
-
-        .inner3-pentagon {
-          width: 50px;
-          height: 50px;
-          animation: pentagonAnim 6s infinite;
-          animation-delay: 4s;
-        }
-      }
-
-      .form-container {
-        z-index: 9;
-
-        .contact-form {
+        .form-field {
+          margin-bottom: 15px;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
 
-          .contact-responset {
-            width: 100%;
-            border: 1px solid green;
-            border-radius: 5px;
-            color: green;
-
-            span {
-              padding: 3px 5px;
-            }
-          }
-
-          .contact-responsef {
-            width: 100%;
-            border: 1px solid rgb(255, 0, 0);
-            border-radius: 5px;
-            color: red;
-
-            span {
-              padding: 3px 5px;
-            }
-          }
-
-          .form-field {
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-
-            label {
-              font-size: 16px;
-              margin-bottom: 5px;
-              color: #333;
-            }
-
-            input,
-            textarea {
-              width: 300px;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              font-size: 14px;
-              transition: all 0.3s ease;
-
-              &::placeholder {
-                opacity: 0.5;
-              }
-
-              @include m380 {
-                width: 250px;
-              }
-
-              &:focus {
-                border-color: #f04;
-                box-shadow: 0 0 5px rgba(240, 4, 4, 0.5);
-                outline: none;
-              }
-            }
-
-            textarea {
-              resize: none;
-              height: 100px;
-            }
-
-            .error {
-              color: red;
-              font-size: 12px;
-              margin-top: 5px;
-            }
-          }
-
-          .submit-button {
-            width: 100%;
-            padding: 10px;
-            background-color: #ff0000;
-            color: white;
+          label {
             font-size: 16px;
-            border: none;
+            margin-bottom: 5px;
+            color: #333;
+          }
+
+          input,
+          textarea {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 4px;
-            border: 1px solid #ff0000;
-            cursor: pointer;
+            font-size: 14px;
             transition: all 0.3s ease;
 
-            &:hover {
-              background-color: transparent;
-              border: 1px solid #ff0000;
-              color: black;
+            &::placeholder {
+              opacity: 0.5;
             }
+
+            @include m380 {
+              width: 250px;
+            }
+
+            &:focus {
+              border-color: #f04;
+              box-shadow: 0 0 5px rgba(240, 4, 4, 0.5);
+              outline: none;
+            }
+          }
+
+          textarea {
+            resize: none;
+            height: 100px;
+          }
+
+          .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+          }
+        }
+
+        .submit-button {
+          width: 100%;
+          padding: 10px;
+          background-color: #ff0000;
+          color: white;
+          font-size: 16px;
+          border: none;
+          border-radius: 4px;
+          border: 1px solid #ff0000;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: transparent;
+            border: 1px solid #ff0000;
+            color: black;
           }
         }
       }
     }
   }
+}
 
-  /* Pentagon animation keyframes */
-  @keyframes pentagonAnim {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1.5);
-    }
+/* Pentagon animation keyframes */
+@keyframes pentagonAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
   }
 }

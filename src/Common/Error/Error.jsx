@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import MyContext from '../Context/MyContext'
 import './Error.scss'
+import { MdErrorOutline } from "react-icons/md";
 
 const Error = () => {
 
@@ -10,13 +11,15 @@ const Error = () => {
         if (sneck) {
             setTimeout(() => {
                 setSneck(false)
-            }, 3000);
+            }, 300000);
         }
     })
     return (
         <>
             {sneck &&
-                <div className='alert' style={{ backgroundColor: msg.match('Thanks') || msg.match('Pass') ? '#28a745' : '#dc3545' }}>{msg}</div>
+                <div className='alert' style={{ color: msg.match('Thanks') ? 'black' : 'red' }}>{msg}</div>
+                // <div className='alert'>{msg}</div>
+
             }
         </>
 

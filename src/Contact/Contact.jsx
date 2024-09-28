@@ -6,7 +6,6 @@ import axios from 'axios'
 import MyContext from '../Common/Context/MyContext';
 
 const Contact = () => {
-
   const { msg, setMsg, setLoading, sneck, setSneck } = useContext(MyContext)
 
   // Form validation schema using Yup
@@ -54,66 +53,64 @@ const Contact = () => {
   };
 
   return (
-    <div className='contact'>
+    <div className="contact-mainn">
+      <h3>Let's Talk</h3>
 
-      <div className="contact-main" id='contact-main'>
-        <h3>Let's Talk</h3>
-        <div className='con'>
-          <div className="anim">
-            <svg className="pentagon-border outer-pentagon" viewBox="0 0 100 100">
-              <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
-            </svg>
-            <svg className="pentagon-border inner-pentagon" viewBox="0 0 100 100">
-              <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
-            </svg>
-            <svg className="pentagon-border inner1-pentagon" viewBox="0 0 100 100">
-              <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
-            </svg>
-            <svg className="pentagon-border inner2-pentagon" viewBox="0 0 100 100">
-              <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
-            </svg>
-            <svg className="pentagon-border inner3-pentagon" viewBox="0 0 100 100">
-              <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
-            </svg>
-          </div>
-
-          <div className="form-container">
-            <Formik
-              initialValues={initialValues}
-              validationSchema={validationSchema}
-              onSubmit={onSubmit}
-            >
-
-              <Form className="contact-form">
-                <div className="form-field">
-                  <label htmlFor="name">Name</label>
-                  <Field type="text" id="name" name="name" placeholder="Enter Your name" />
-                  <ErrorMessage name="name" component="div" className="error" />
-                </div>
-
-                <div className="form-field">
-                  <label htmlFor="email">Email</label>
-                  <Field type="email" id="email" name="email" placeholder="abc@gmail.com" />
-                  <ErrorMessage name="email" component="div" className="error" />
-                </div>
-
-                <div className="form-field">
-                  <label htmlFor="message">Message</label>
-                  <Field as="textarea" id="message" name="message" placeholder="Enter Message here..." />
-                  <ErrorMessage name="message" component="div" className="error" />
-                </div>
-
-                <button type="submit" className="submit-button">Submit</button>
-              </Form>
-
-            </Formik>
-          </div>
-
+      <div className='con'>
+        <div className="anim">
+          <svg className="pentagon-border outer-pentagon" viewBox="0 0 100 100">
+            <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
+          </svg>
+          <svg className="pentagon-border inner-pentagon" viewBox="0 0 100 100">
+            <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
+          </svg>
+          <svg className="pentagon-border inner1-pentagon" viewBox="0 0 100 100">
+            <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
+          </svg>
+          <svg className="pentagon-border inner2-pentagon" viewBox="0 0 100 100">
+            <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
+          </svg>
+          <svg className="pentagon-border inner3-pentagon" viewBox="0 0 100 100">
+            <polygon points="50,1 98,38 79,95 21,95 2,38" stroke="red" strokeWidth="0.4" fill="none" />
+          </svg>
         </div>
+
+        <div className="form-container">
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
+          >
+
+            <Form className="contact-form">
+              <div className="form-field">
+                <label htmlFor="name">Name</label>
+                <Field type="text" id="name" name="name" placeholder="Enter Your name" />
+                <ErrorMessage name="name" component="div" className="error" />
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="email">Email</label>
+                <Field type="email" id="email" name="email" placeholder="abc@gmail.com" />
+                <ErrorMessage name="email" component="div" className="error" />
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="message">Message</label>
+                <Field as="textarea" id="message" name="message" placeholder="Enter Message here..." />
+                <ErrorMessage name="message" component="div" className="error" />
+              </div>
+
+              <button type="submit" className="submit-button">Submit</button>
+            </Form>
+
+          </Formik>
+        </div>
+
       </div>
     </div>
-
   );
 };
 
 export default Contact;
+

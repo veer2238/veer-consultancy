@@ -28,6 +28,28 @@
   }
 }
 
+@mixin max1180 {
+  @media only screen and (max-width: 1180px) {
+    @content;
+  }
+}
+
+@mixin max800 {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
+}
+@mixin max750 {
+  @media only screen and (max-width: 750px) {
+    @content;
+  }
+}
+@mixin max650 {
+  @media only screen and (max-width: 650px) {
+    @content;
+  }
+}
+
 @mixin d650 {
   @media only screen and (max-width: 600px) {
     @content;
@@ -62,6 +84,16 @@
     @content;
   }
 }
+@mixin max525 {
+  @media only screen and (max-width: 525px) {
+    @content;
+  }
+}
+@mixin max450 {
+  @media only screen and (max-width: 450px) {
+    @content;
+  }
+}
 
 @mixin m1270 {
   @media only screen and (max-width: 1270px) {
@@ -75,8 +107,16 @@
   }
 }
 
-// @mixin d-flex {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.scroll-to-top {
+  background-color: transparent;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  box-shadow: none;
+  @include max650 {
+    right: 25px;
+    bottom: 25px;
+    height: 25px;
+    width: 25px;
+  }
+}

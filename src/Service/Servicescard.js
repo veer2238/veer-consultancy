@@ -1,6 +1,5 @@
 import React from 'react'
 import './Service.scss'
-import { FaGraduationCap } from "react-icons/fa";
 
 const Servicescard = ({ obj }) => {
     return (

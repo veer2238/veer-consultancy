@@ -13,12 +13,17 @@ import Error from './Common/Error/Error'
 import Footer from './Footer/Footer'
 import PassportVerify from './Passportcomp/PassportVerify'
 import Scard from './Home/Service-card/Scard'
+import ScrollToTop from "react-scroll-to-top";
+import { FaCircleArrowUp } from "react-icons/fa6";
+import SubHeader from './SubHeader/SubHeader'
+import GoToTop from './Common/Gototop/GoToTop'
+
 const App = () => {
   return (
 
     <BrowserRouter>
       <MyContextProvider>
-
+        <SubHeader />
         <Header />
         <Login />
         <Loader />
@@ -32,6 +37,8 @@ const App = () => {
           <Route path='/passport' element={<PassportVerify />} />
           <Route path='/:sname' element={<Scard />} />
         </Routes>
+        <ScrollToTop smooth component={<FaCircleArrowUp size={40} color="#ff0000" />} />
+        <GoToTop />
         <Footer />
       </MyContextProvider>
     </BrowserRouter>

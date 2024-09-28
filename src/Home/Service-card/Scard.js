@@ -5,8 +5,7 @@ import './Scard.scss'
 
 const Scard = () => {
 
-    const { Navigate, params } = useContext(MyContext)
-
+   
 
     return (
         <div className='scard'>
