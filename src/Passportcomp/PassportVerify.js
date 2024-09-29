@@ -30,7 +30,7 @@ const PassportVerify = () => {
         try {
             setLoading(true)
             document.querySelector('body').style.overflow = 'hidden'
-            const { data } = await axios.post('http://localhost:3034/passportverify', values)
+            const { data } = await axios.post('https://backendl.vercel.app/passportverify', values)
             console.log(data)
             if (data.success) {
                 setMsg(data.message)

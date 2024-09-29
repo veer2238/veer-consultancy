@@ -29,7 +29,7 @@ const Inquiry = () => {
         try {
             setLoading(true)
             document.querySelector('body').style.overflow = 'hidden'
-            const { data } = await axios.post('http://localhost:3034/inquiry', values)
+            const { data } = await axios.post('https://backendl.vercel.app/inquiry', values)
 
             if (data.success) {
                 setMsg(data.message)
